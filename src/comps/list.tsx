@@ -10,19 +10,19 @@ type item = {
 const list: item[] = [
   {
     title: "Windows",
-    icon: <FaWindows className="text-6xl" />,
+    icon: <FaWindows className=" text-3xl md:text-6xl" />,
   },
   {
     title: "MacOS",
-    icon: <FaApple className="text-6xl" />,
+    icon: <FaApple className=" text-3xl md:text-6xl" />,
   },
   {
     title: "Android",
-    icon: <GrAndroid className="text-6xl" />,
+    icon: <GrAndroid className=" text-3xl md:text-6xl" />,
   },
   {
     title: "IOS",
-    icon: <FaAppStoreIos className="text-6xl" />,
+    icon: <FaAppStoreIos className=" text-3xl md:text-6xl" />,
   },
 ]
 
@@ -34,11 +34,11 @@ type addiProps = {
 function Card({ title, icon, selected, onSelect }: item & addiProps) {
   return (
     <div
-      className={`dc flex-col px-4 py-6 rounded-lg border shadow cursor-pointer hover:shadow-amber-200 ${selected === title ? "text-amber-600 shadow-amber-200 border-amber-400" : ""}`}
+      className={`dc flex-col px-4 py-4 md:py-6 rounded-lg border shadow cursor-pointer hover:shadow-amber-200 ${selected === title ? "text-amber-600 shadow-amber-200 border-amber-400" : ""}`}
       onClick={() => onSelect(title)}
     >
       {icon}
-      <h2 className="text-lg font-medium">{title}</h2>
+      <h2 className="text-base md:text-lg font-medium">{title}</h2>
     </div>
   )
 }
@@ -50,7 +50,7 @@ function List() {
   const onSelect = (val: string) => update({ selected: val })
 
   return (
-    <div className="grid grid-cols-4 gap-5 pr-12 my-6">
+    <div className="mini-scroll-bar grid grid-cols-[repeat(4,140px)] md:grid-cols-4 gap-5 pb-2 md:pb-0 pr-6 md:pr-12 my-6 overflow-x-auto">
       {
         list.map(l => (
           <Card

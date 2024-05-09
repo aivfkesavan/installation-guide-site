@@ -44,7 +44,7 @@ type addiProps = {
 function Card({ title, icon, selected, onSelect }: item & addiProps) {
   return (
     <div
-      className={`dc w-32 md:w-40 flex-col px-4 py-4 md:py-6 rounded-lg border shadow cursor-pointer hover:shadow-amber-200 ${selected === title ? "text-amber-600 shadow-amber-200 border-amber-400" : ""}`}
+      className={`dc w-32 md:w-40 shrink-0 flex-col px-4 py-4 md:py-6 rounded-lg border shadow cursor-pointer hover:shadow-amber-200 ${selected === title ? "text-amber-600 shadow-amber-200 border-amber-400" : ""}`}
       onClick={() => onSelect(title)}
     >
       {icon}
@@ -59,7 +59,7 @@ function List() {
   const onSelect = (val: string) => misc.update({ selected: val })
 
   return (
-    <div className="mini-scroll-bar df justify-center gap-5 pb-2 pr-6 md:pr-12 my-6 overflow-x-auto">
+    <div className="mini-scroll-bar df justify-center gap-5 pl-32 xs:pl-4 sm:pl-0 pb-2 pr-6 md:pr-12 my-6 overflow-x-auto">
       {
         list?.[misc.tab]?.map(l => (
           <Card

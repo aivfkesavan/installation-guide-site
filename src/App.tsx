@@ -7,9 +7,12 @@ import Windows from './comps/windows';
 import MacOS from './comps/macos';
 import List from './comps/list';
 import IOS from './comps/ios';
+import Web from './comps/web';
+
+const list = ["Desktop", "Mobile"]
 
 function AppRoutes() {
-  const selected = useMiscStore(s => s.selected)
+  const misc = useMiscStore()
 
   return (
     <section className="dc h-screen p-4 md:p-8 bg-neutral-100">
@@ -25,26 +28,44 @@ function AppRoutes() {
           </h1>
         </div>
 
+        <div className='dc mt-4 gap-0'>
+          {
+            list.map(l => (
+              <button
+                key={l}
+                onClick={() => misc.update(l === "Desktop" ? { tab: "Desktop", selected: "Windows" } : { tab: "Mobile", selected: "Website" })}
+                className={`px-4 py-1.5 text-sm border border-amber-400 ${l === "Desktop" ? "rounded-l-md" : "rounded-r-md"} ${misc.tab === l ? " bg-amber-300" : ""}`}
+              >
+                {l}
+              </button>
+            ))
+          }
+        </div>
         <List />
 
         {
-          selected === "Windows" &&
+          misc.selected === "Windows" &&
           <Windows />
         }
 
         {
-          selected === "MacOS" &&
+          misc.selected === "MacOS" &&
           <MacOS />
         }
 
         {
-          selected === "Android" &&
+          misc.selected === "Android" &&
           <Android />
         }
 
         {
-          selected === "IOS" &&
+          misc.selected === "IOS" &&
           <IOS />
+        }
+
+        {
+          misc.selected === "Website" &&
+          <Web />
         }
       </div>
     </section>

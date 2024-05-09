@@ -14,7 +14,7 @@ const list: item[] = [
   },
   {
     title: "MacOS",
-    icon: <FaAppStoreIos className="text-6xl" />,
+    icon: <FaApple className="text-6xl" />,
   },
   {
     title: "Android",
@@ -22,7 +22,7 @@ const list: item[] = [
   },
   {
     title: "IOS",
-    icon: <FaApple className="text-6xl" />,
+    icon: <FaAppStoreIos className="text-6xl" />,
   },
 ]
 
@@ -34,7 +34,7 @@ type addiProps = {
 function Card({ title, icon, selected, onSelect }: item & addiProps) {
   return (
     <div
-      className={`dc flex-col px-4 py-6 rounded-lg border shadow cursor-pointer ${selected === title ? "text-amber-600 shadow-amber-200 border-amber-400" : ""}`}
+      className={`dc flex-col px-4 py-6 rounded-lg border shadow cursor-pointer hover:shadow-amber-200 ${selected === title ? "text-amber-600 shadow-amber-200 border-amber-400" : ""}`}
       onClick={() => onSelect(title)}
     >
       {icon}

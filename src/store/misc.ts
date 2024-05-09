@@ -10,7 +10,7 @@ type actions = {
 
 const useMiscStore = create<state & actions>(
   set => ({
-    selected: "",
+    selected: "Windows",
     update: payload => set({ ...payload }),
   })
 )

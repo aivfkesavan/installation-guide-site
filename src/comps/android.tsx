@@ -12,7 +12,7 @@ function Android() {
 
           <li className="mb-2">
             <p className="text-sm md:text-base">2. Download the Mobile App</p>
-            <p className="pl-4">- <a href="" className="text-amber-600 hover:underline" download>Click here</a> to download the HaiVE-AI Studio Android app.</p>
+            <p className="pl-4">- <a href="https://drive.google.com/file/d/1aKqU27U6Pdbtha5wCQZxBkoF1A3zTaTC/view?usp=sharing" className="text-amber-600 hover:underline" download>Click here</a> to download the HaiVE-AI Studio Android app.</p>
           </li>
         </ul>
       </div>

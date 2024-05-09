@@ -13,7 +13,7 @@ function MacOS() {
         <ul>
           <li className="mb-2">
             <p className="text-sm md:text-base">1. Download the Installer</p>
-            <p className="pl-4">- Download the Installer from the official site. <a href="" className="text-amber-600 hover:underline" download>Click here</a> to download.</p>
+            <p className="pl-4">- Download the Installer from the official site. <a href="https://drive.google.com/file/d/1KLqOpupRURawbY90Mh1g2ttns436_Wcf/view?usp=sharing" className="text-amber-600 hover:underline" download>Click here</a> to download.</p>
           </li>
 
           <li className="mb-2">

@@ -50,7 +50,7 @@ function List() {
   const onSelect = (val: string) => update({ selected: val })
 
   return (
-    <div className="mini-scroll-bar grid grid-cols-[repeat(4,140px)] md:grid-cols-4 gap-5 pb-2 md:pb-0 pr-6 md:pr-12 my-6 overflow-x-auto">
+    <div className="mini-scroll-bar grid grid-cols-[repeat(4,140px)] md:grid-cols-4 gap-5 pb-2 pr-6 md:pr-12 my-6 overflow-x-auto">
       {
         list.map(l => (
           <Card

@@ -12,7 +12,7 @@ function IOS() {
 
           <li className="mb-2">
             <p className="text-sm md:text-base">2. Download the Mobile App</p>
-            <p className="pl-4">- <a href="" className="text-amber-600 hover:underline" download>Click here</a> to download the HaiVE-AI Studio IOS app.</p>
+            <p className="pl-4">- <a href="https://apps.apple.com/us/app/haive-ai-studio/id6499375021" className="text-amber-600 hover:underline" download>Click here</a> to download the HaiVE-AI Studio IOS app.</p>
           </li>
         </ul>
       </div>
